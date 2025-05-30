@@ -1,0 +1,24 @@
+<odoo>
+    <record id="mail_template_maintenance_reminder" model="mail.template">
+        <field name="name">Maintenance Reminder</field>
+        <field name="model_id" ref="model_maintenance_task"/>
+        <field name="subject">Reminder: Scheduled Maintenance Task - {{object.name}}</field>
+        <field name="email_from">{{user.email}}</field>
+        <field name="email_to">{{object.assigned_to.email}}</field>
+        <field name="body_html" type="html">
+            <p>Hello <t t-out="object.assigned_to.name"/>,
+            </p>
+            <p>This is a reminder for the maintenance task
+                <strong>
+                    <t t-out="object.name"/>
+                </strong>
+                scheduled on
+                <strong>
+                    <t t-out="object.scheduled_date"/>
+                </strong>
+                .
+            </p>
+            <p>Thank you.</p>
+        </field>
+    </record>
+</odoo>

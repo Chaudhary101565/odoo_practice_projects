@@ -1,0 +1,9 @@
+.maintenance_kanban.priority_low {
+    background-color: #d9f7ff !important;
+}
+.maintenance_kanban.priority_medium {
+    background-color: #fff4ce !important;
+}
+.maintenance_kanban.priority_high {
+    background-color: #ffe6e6 !important;
+}

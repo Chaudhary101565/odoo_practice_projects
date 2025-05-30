@@ -1,0 +1,6 @@
+<odoo>
+    <menuitem id="maintenance_root" name="Maintenance" sequence="10"/>
+
+    <menuitem id="maintenance_task_menu" name="Tasks" parent="maintenance_root"
+              action="maintenance_task_action" sequence="1"/>
+</odoo>

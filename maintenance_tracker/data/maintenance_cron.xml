@@ -1,0 +1,13 @@
+<odoo>
+    <record id="ir_cron_maintenance_reminder" model="ir.cron">
+        <field name="name">Maintenance Task Reminder</field>
+        <field name="model_id" ref="model_maintenance_task"/>
+        <field name="state">code</field>
+        <field name="code">
+            model.search([('scheduled_date', '=', (datetime.date.today() +
+            datetime.timedelta(days=1)).isoformat())]).send_reminder()
+        </field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+    </record>
+</odoo>

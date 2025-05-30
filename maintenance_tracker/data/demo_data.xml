@@ -1,0 +1,49 @@
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_task_1" model="maintenance.task">
+            <field name="name">Check Oil Levels</field>
+            <field name="machine_id" ref="product.product_product_1"/>
+            <field name="scheduled_date">2025-06-01</field>
+            <field name="assigned_to" ref="base.user_demo"/>
+            <field name="priority">high</field>
+            <field name="maintenance_type">preventive</field>
+        </record>
+
+        <record id="demo_task_2" model="maintenance.task">
+            <field name="name">Replace Filter</field>
+            <field name="machine_id" ref="product.product_product_2"/>
+            <field name="scheduled_date">2025-06-02</field>
+            <field name="assigned_to" ref="base.user_admin"/>
+            <field name="priority">medium</field>
+            <field name="maintenance_type">corrective</field>
+        </record>
+
+        <record id="demo_task_3" model="maintenance.task">
+            <field name="name">Lubricate Bearings</field>
+            <field name="machine_id" ref="product.product_product_3"/>
+            <field name="scheduled_date">2025-06-03</field>
+            <field name="assigned_to" ref="base.user_demo"/>
+            <field name="priority">low</field>
+            <field name="maintenance_type">preventive</field>
+        </record>
+
+        <record id="demo_task_4" model="maintenance.task">
+            <field name="name">Inspect Electrical Wiring</field>
+            <field name="machine_id" ref="product.product_product_4"/>
+            <field name="scheduled_date">2025-06-04</field>
+            <field name="assigned_to" ref="base.user_admin"/>
+            <field name="priority">high</field>
+            <field name="maintenance_type">corrective</field>
+        </record>
+
+        <record id="demo_task_5" model="maintenance.task">
+            <field name="name">Test Emergency Stop Button</field>
+            <field name="machine_id" ref="product.product_product_5"/>
+            <field name="scheduled_date">2025-06-05</field>
+            <field name="assigned_to" ref="base.user_demo"/>
+            <field name="priority">medium</field>
+            <field name="maintenance_type">preventive</field>
+        </record>
+    </data>
+</odoo>
